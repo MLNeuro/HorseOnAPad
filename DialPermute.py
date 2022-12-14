@@ -19,7 +19,7 @@ class DialPermute(abc.ABC):
             :param start:   Starting number to begin with
             :return:        Number of possible unique comibinations
         '''
-        if N == 0 or start == 5:
+        if N <= 0 or start not in [0,1,2,3,4,6,7,8,9]:
             self.total = 0
             logging.info("Total Permutations: {}".format(self.total))
             return self.total
